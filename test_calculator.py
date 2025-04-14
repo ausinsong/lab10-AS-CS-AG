@@ -1,3 +1,7 @@
+# https://github.com/ausinsong/lab10-AS-CS-AG.git
+# Partner 1: Andrew Gendy
+# Partner 2: Austin
+# partner 3: Caden Shiver
 import unittest
 from calculator import *
 import calculator
