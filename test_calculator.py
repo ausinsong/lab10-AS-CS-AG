@@ -33,7 +33,7 @@ class TestCalculator(unittest.TestCase):
     def test_log_invalid_base(self):
         for a, b in [(1, 10), (-2, 10), (2, -10)]:
             try:
-                calculator.logarithm(a, b)
+                calculator.log(a, b)
                 print(f"test_log_invalid_base FAILED (a={a}, b={b})")
             except ValueError:
                 print(f"test_log_invalid_base passed (a={a}, b={b})")
