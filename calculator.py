@@ -3,6 +3,19 @@
 # Partner 2: Austin
 # partner 3: Caden Shiver
 import math
+def square_root(a):
+    try:
+        if a < 0:
+            raise ValueError("Square root of a negative number is not allowed")
+        return math.sqrt(a)
+    except ValueError as e:
+        raise e
+
+def hypotenuse(a, b):
+    try:
+        return math.hypot(a, b)
+    except Exception as e:
+        raise e
 
 def add(a, b):
     return a + b
@@ -24,8 +37,6 @@ def logarithm(a, b):
     if b <= 0:
         raise ValueError("Logarithm argument must be positive")
     return math.log(b, a)
-
-import math
 
 def add(a, b):
     return a + b
