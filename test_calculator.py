@@ -21,7 +21,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
-            calculator.divide(10, 0)
+            calculator.div(10, 0)  # Updated to div
 
     def test_logarithm(self):
         self.assertTrue(math.isclose(calculator.logarithm(2, 8), 3))
@@ -33,14 +33,14 @@ class TestCalculator(unittest.TestCase):
                 calculator.logarithm(a, b)
 
     def test_multiply(self):
-        self.assertEqual(calculator.multiply(3, 4), 12)
-        self.assertEqual(calculator.multiply(-2, 5), -10)
-        self.assertEqual(calculator.multiply(0, 100), 0)
+        self.assertEqual(calculator.mul(3, 4), 12)  # Updated to mul
+        self.assertEqual(calculator.mul(-2, 5), -10)  # Updated to mul
+        self.assertEqual(calculator.mul(0, 100), 0)  # Updated to mul
 
     def test_divide(self):
-        self.assertEqual(calculator.divide(10, 2), 5)
-        self.assertEqual(calculator.divide(-10, 2), -5)
-        self.assertEqual(calculator.divide(20, 2), 10)
+        self.assertEqual(calculator.div(10, 2), 5)  # Updated to div
+        self.assertEqual(calculator.div(-10, 2), -5)  # Updated to div
+        self.assertEqual(calculator.div(20, 2), 10)  # Updated to div
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):  # Log of negative number or zero
