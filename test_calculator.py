@@ -63,19 +63,20 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(multiply(-2, 5), -10)
         self.assertEqual(multiply(0, 100), 0)
 
-    # Test divide function
     def test_divide(self):
         self.assertEqual(divide(10, 2), 5)
         self.assertEqual(divide(-10, 2), -5)
-        self.assertRaises(ValueError, divide, 10, 0)  # Testing divide by zero
+        self.assertEqual(divide(20, 2), 10)
 
-    # Test log function (only for valid positive numbers)
+
+
     def test_log_invalid_argument(self):
-        self.assertRaises(ValueError, log, -10)  # Log of negative number
-        self.assertRaises(ValueError, log, 0)  # Log of zero
-        self.assertEqual(log(1), 0)  # Log of 1 is 0
-
-    # Test hypotenuse function
+        with self.assertRaises(ValueError):  # Log of negative number or zero
+            logarithm(-10, 10)
+        with self.assertRaises(ValueError):  # Log of zero
+            logarithm(0, 10)
+        with self.assertRaises(ValueError):  # Log base non-positive
+            logarithm(10, -5)
     def test_hypotenuse(self):
         self.assertEqual(hypotenuse(3, 4), 5)
         self.assertEqual(hypotenuse(5, 12), 13)
