@@ -24,11 +24,11 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
-def multiply(a, b):
+def mul(a, b):  # Renamed from multiply
     return a * b
 
-def divide(a, b):
-    if b == 0:  # Fixed: Check denominator, not numerator
+def div(a, b):  # Renamed from divide
+    if b == 0:
         raise ZeroDivisionError("Division by zero is not allowed")
     return a / b
 
@@ -39,5 +39,5 @@ def logarithm(a, b):
         raise ValueError("Logarithm argument must be positive")
     return math.log(b, a)
 
-def exponent(a, b):
+def exp(a, b):  # Renamed from exponent
     return a ** b
