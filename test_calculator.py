@@ -69,7 +69,6 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(divide(20, 2), 10)
 
 
-
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):  # Log of negative number or zero
             logarithm(-10, 10)
@@ -82,7 +81,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(hypotenuse(5, 12), 13)
         self.assertEqual(hypotenuse(8, 15), 17)
 
-    def test_square_root(self):
+    def test_sqrt(self):
         self.assertEqual(square_root(9), 3)
         self.assertEqual(square_root(16), 4)
         self.assertRaises(ValueError, square_root, -9)  # Testing square root of a negative number
